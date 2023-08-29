@@ -21,14 +21,16 @@ def saludos(nombre):
     elif 6 <= hora_actual < 12:
         return ("¡Buenos días " + nombre + "!")
     else:
-        return ("¡Buenas noches " + nombre + "!")   
+        return ("¡Buenas noches " + nombre + "!")
 
 def voltear(palabra):
-        voltear = input()
-        print(voltear[::-1])
+    voltear = input()
+    print(voltear[::-1])
 
-def main():
-    ohce()
+def palindromo(palabra):
+    palabra_volteada = palabra[::-1]
+    if palabra == palabra_volteada:
+        print("¡Bonita palabra!")
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:

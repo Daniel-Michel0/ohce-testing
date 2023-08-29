@@ -33,10 +33,10 @@ def test_voltear():
 
 def test_palindromo():
     input_values = ["tacocat"]
-    expected_output = "tacocat\n¡Bonita palabra!"
+    expected_output = "¡Bonita palabra!\n"
 
     with patch("builtins.input", side_effect=input_values), patch("sys.stdout", new_callable=io.StringIO) as mock_stdout:
-        ohce.voltear(input_values[0])
+        ohce.palindromo(input_values[0])
 
         output = mock_stdout.getvalue()
         assert output == expected_output
