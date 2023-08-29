@@ -42,8 +42,8 @@ def test_palindromo():
         assert output == expected_output
 
 def test_stop():
-    input_values = ["Stop!", "Chayanne"]
-    expected_output = "Adios " + input_values[1]
+    input_values = ["stop!", "Chayanne"]
+    expected_output = "Adios " + input_values[1] + "\n"
 
     with patch("builtins.input", side_effect=input_values), patch("sys.stdout", new_callable=io.StringIO) as mock_stdout:
         ohce.adios(input_values)

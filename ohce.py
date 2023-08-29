@@ -32,6 +32,10 @@ def palindromo(palabra):
     if palabra == palabra_volteada:
         print("¡Bonita palabra!")
 
+def adios(palabras):
+    if palabras[0] == "stop!":
+        print("Adios " + palabras[1])
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         nombre = sys.argv[1]
