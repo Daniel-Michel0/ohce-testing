@@ -40,3 +40,13 @@ def test_palindromo():
 
         output = mock_stdout.getvalue()
         assert output == expected_output
+
+def test_stop():
+    input_values = ["Stop!", "Chayanne"]
+    expected_output = "Adios " + input_values[1]
+
+    with patch("builtins.input", side_effect=input_values), patch("sys.stdout", new_callable=io.StringIO) as mock_stdout:
+        ohce.adios(input_values)
+
+        output = mock_stdout.getvalue()
+        assert output == expected_output
